@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Unit Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="topbar">
+    <h1>Unit Converter</h1>
+    <div class="tabs">
+      <button class="tab active" data-target="distance">Distance</button>
+      <button class="tab" data-target="temperature">Temperature</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Distance panel -->
+    <section id="distance" class="panel">
+      <h2>Distance Converter</h2>
+      <form id="distanceForm">
+        <label for="distanceType">Conversion Type</label>
+        <select id="distanceType">
+          <option value="miles-km">Miles to Kilometres</option>
+          <option value="km-miles">Kilometres to Miles</option>
+        </select>
+
+        <label for="distanceSingle">Single Value</label>
+        <input id="distanceSingle" type="number" step="any" placeholder="Example: 10">
+        <button type="button" data-action="convert-single" data-panel="distance">Convert Single Value</button>
+
+        <label for="distanceList">List of Values</label>
+        <input id="distanceList" type="text" placeholder="Example: 1, 5, 10">
+        <button type="button" data-action="convert-list" data-panel="distance">Convert List</button>
+
+        <div class="result-box">
+          <h3>Result</h3>
+          <p id="distanceResult" class="result">No conversion yet.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- Temperature panel -->
+    <section id="temperature" class="panel hidden">
+      <h2>Temperature Converter</h2>
+      <form id="temperatureForm">
+        <label for="temperatureType">Conversion Type</label>
+        <select id="temperatureType">
+          <option value="celsius-fahrenheit">Celsius to Fahrenheit</option>
+          <option value="fahrenheit-celsius">Fahrenheit to Celsius</option>
+        </select>
+
+        <label for="temperatureSingle">Single Value</label>
+        <input id="temperatureSingle" type="number" step="any" placeholder="Example: 100">
+        <button type="button" data-action="convert-single" data-panel="temperature">Convert Single Value</button>
+
+        <label for="temperatureList">List of Values</label>
+        <input id="temperatureList" type="text" placeholder="Example: 0, 100, 37">
+        <button type="button" data-action="convert-list" data-panel="temperature">Convert List</button>
+
+        <div class="result-box">
+          <h3>Result</h3>
+          <p id="temperatureResult" class="result">No conversion yet.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
