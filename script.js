@@ -2,6 +2,8 @@
 const converters = {
   'miles-km': value => value * 1.60934,
   'km-miles': value => value / 1.60934,
+  'lb-kg': value => value * 0.453592,
+  'kg-lb': value => value / 0.453592,
   'celsius-fahrenheit': value => value * 9 / 5 + 32,
   'fahrenheit-celsius': value => (value - 32) * 5 / 9
 };
@@ -9,6 +11,8 @@ const converters = {
 const labels = {
   'miles-km': 'km',
   'km-miles': 'miles',
+  'lb-kg': 'kg',
+  'kg-lb': 'lb',
   'celsius-fahrenheit': '\u00B0F',
   'fahrenheit-celsius': '\u00B0C'
 };

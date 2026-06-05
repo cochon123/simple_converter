@@ -11,6 +11,7 @@
     <h1>Unit Converter</h1>
     <div class="tabs">
       <button class="tab active" data-target="distance">Distance</button>
+      <button class="tab" data-target="weight">Weight</button>
       <button class="tab" data-target="temperature">Temperature</button>
     </div>
   </nav>
@@ -37,6 +38,31 @@
         <div class="result-box">
           <h3>Result</h3>
           <p id="distanceResult" class="result">No conversion yet.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- Weight panel -->
+    <section id="weight" class="panel hidden">
+      <h2>Weight Converter</h2>
+      <form id="weightForm">
+        <label for="weightType">Conversion Type</label>
+        <select id="weightType">
+          <option value="lb-kg">Pounds to Kilograms</option>
+          <option value="kg-lb">Kilograms to Pounds</option>
+        </select>
+
+        <label for="weightSingle">Single Value</label>
+        <input id="weightSingle" type="number" step="any" placeholder="Example: 150">
+        <button type="button" data-action="convert-single" data-panel="weight">Convert Single Value</button>
+
+        <label for="weightList">List of Values</label>
+        <input id="weightList" type="text" placeholder="Example: 100, 150, 200">
+        <button type="button" data-action="convert-list" data-panel="weight">Convert List</button>
+
+        <div class="result-box">
+          <h3>Result</h3>
+          <p id="weightResult" class="result">No conversion yet.</p>
         </div>
       </form>
     </section>
